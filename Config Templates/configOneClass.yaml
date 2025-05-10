@@ -1,0 +1,32 @@
+
+problem_type: "oneclass"
+
+# For multi-label: XGBoost, CatBoost, RandomForest, KNN, for one-class: OC-SVM, IsolationForest, LocalOutlierFactor
+algorithm: "OneClassSVM" 
+
+results_path: "..."
+
+data:
+  train_data_path: "..."
+  test_data_path: "..."
+  labels: ["Label0", "Label1", "Label2", "Label3", "Label4"]
+  # X_train_path: ""
+  # y_train_path: ""
+  # X_test_path: ""
+  # y_test_path: ""
+  data_has_index: true
+
+pipeline:
+  scale_data: true
+  variance_threshold: 0.0 # Set to false to disable
+  RFECV: true
+  SMOTE: false
+  n_jobs_cv: 3
+  n_splits_cv: 5
+
+hpo:
+  n_trials: 100
+  metric: "f1"
+  optimization_direction: "maximize"
+  temp_results_path: "..."
+  n_jobs_optuna: 4
