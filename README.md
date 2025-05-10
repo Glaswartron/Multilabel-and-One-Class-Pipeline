@@ -1,5 +1,5 @@
 # Machine Learning (ML) pipeline for multilabel classification and one-class classification with feature selection and hyperparameter optimization
-I developed these materials during my time as a student assistant at the FAPS institute at FAU Erlangen-Nürnberg.
+I developed these materials during my time as a student assistant at the [FAPS](https://www.faps.fau.de/) institute at [FAU Erlangen-Nürnberg](https://www.fau.de/).
 ## Script
 `BuildAndTestClassifier.py` fits a multi-label or a one-class classifier and tests it
 The script also performs hyperparameter optimization (HPO) for the underlying algorithm / model using [Optuna](https://optuna.readthedocs.io/en/stable/).
